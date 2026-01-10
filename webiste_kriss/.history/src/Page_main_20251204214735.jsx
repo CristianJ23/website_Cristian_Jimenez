@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 // Se reemplaza la importación local de la imagen por un placeholder URL para resolver el error de compilación
-// const miFoto = "https://raw.githubusercontent.com/CristianJ23/website_Cristian_Jimenez/gh-pages/assets/me_curriculum-m8aozocF.jpg";
-const miFoto = "https://github.com/CristianJ23/website_Cristian_Jimenez/blob/main/webiste_kriss/src/me_curriculum.jpg";
+const miFoto = "https://github.com/CristianJ23/website_Cristian_Jimenez/blob/gh-pages/assets/me_curriculum-m8aozocF.jpg?raw=true";
 
 // --- Componentes de Datos y UI Reutilizables ---
 
@@ -227,7 +226,7 @@ const Page_main = () => {
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.815-.26.815-.572 0-.281-.01-1.03-.015-2.021-3.339.723-4.04-1.609-4.04-1.609-.546-1.387-1.334-1.756-1.334-1.756-1.087-.745.084-.729.084-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.775.419-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.383 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.652.241 2.873.118 3.176.77.838 1.233 1.911 1.233 3.221 0 4.609-2.806 5.626-5.474 5.924.43.37.818 1.11.818 2.247 0 1.605-.015 2.898-.015 3.297 0 .315.216.696.823.571C20.562 21.82 24 17.322 24 12c0-6.627-5.373-12-12-12z"/></svg>
                 https://github.com/CristianJ23
             </a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/kriss-kriss" className="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+            <p>LinkedIn: <a href="www.linkedin.com/in/kriss-kriss" className="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.79 0 0 .78 0 1.74v20.52C0 23.22.79 24 1.77 24h20.46c.98 0 1.77-.78 1.77-1.74V1.74C24 .78 23.21 0 22.23 0zM7.17 20.46H3.59V8.42h3.58v12.04zM5.38 6.84c-1.16 0-1.92-.78-1.92-1.75s.76-1.76 1.92-1.76c1.16 0 1.92.79 1.92 1.76s-.76 1.75-1.92 1.75zM20.46 20.46h-3.58v-6.28c0-1.5-.54-2.52-1.88-2.52-1.02 0-1.63.7-1.9 1.38-.1.25-.13.59-.13.93v6.52H9.39s.05-10.9.0-12.04h3.58v1.54c.48-.73 1.35-1.77 3.22-1.77 2.34 0 4.1 1.54 4.1 4.87v7.39z"/></svg>
                 www.linkedin.com/in/kriss-kriss
             </a></p>
