@@ -252,7 +252,7 @@ const Page_main = () => {
         {/* NUEVA SECCIÓN: TECNOLOGÍAS CONOCIDAS */}
         <div id="tecnologias" className="pt-8 mb-12">
           <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
-            known technologies
+            Tecnologías Conocidas
           </h2>
             <Tecnologias />
         </div>
