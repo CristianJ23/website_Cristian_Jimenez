@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 // Se reemplaza la importación local de la imagen por un placeholder URL para resolver el error de compilación
-// const miFoto = "/src/me_curriculum.jpg";
-// import miFoto from './assets/me_curriculum-m8aozocF.jpg';
-import miFoto from './assets/me_curriculum.jpg';
+const miFoto = "/src/me_curriculum.jpg";
 // const miFoto = "https://github.com/CristianJ23/website_Cristian_Jimenez/blob/main/webiste_kriss/src/me_curriculum.jpg";
 
 // --- Componentes de Datos y UI Reutilizables ---
@@ -126,7 +124,7 @@ const Page_main = () => {
         <img
           src={miFoto}
           alt="Cristian Jimenez"
-          className="w-45 h-45 rounded-full object-cover mx-auto mb-5 bg-gray-300 shadow-md ring-4 ring-indigo-300"
+          className="w-45 45 rounded-full object-cover mx-auto mb-5 bg-gray-300 shadow-md ring-4 ring-indigo-300"
         />
         <h1 className="text-4xl font-extrabold text-indigo-600 mb-2">
           Cristian Jimenez

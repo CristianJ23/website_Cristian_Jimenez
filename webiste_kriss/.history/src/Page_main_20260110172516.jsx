@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 // Se reemplaza la importación local de la imagen por un placeholder URL para resolver el error de compilación
-// const miFoto = "/src/me_curriculum.jpg";
-// import miFoto from './assets/me_curriculum-m8aozocF.jpg';
-import miFoto from './assets/me_curriculum.jpg';
+const miFoto = "/src/me_curriculum.jpg";
 // const miFoto = "https://github.com/CristianJ23/website_Cristian_Jimenez/blob/main/webiste_kriss/src/me_curriculum.jpg";
 
 // --- Componentes de Datos y UI Reutilizables ---
