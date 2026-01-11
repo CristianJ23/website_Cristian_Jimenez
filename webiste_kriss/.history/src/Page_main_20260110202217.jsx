@@ -4,7 +4,6 @@ import CardProyectoVideo from "./proyects/CardProyectoVideo";
 import miFoto from "./assets/me_curriculum.jpg";
 import certificate_phawai from "./assets/certificate_phawai.png";
 import aceptacion_sala from "./assets/aceptacion_sala.png";
-import chep from "./assets/chep_segundo_lugar.png";
 
 // --- Componentes de Datos y UI Reutilizables ---
 
@@ -29,43 +28,43 @@ const datosCursos = [
     nombre: "Segundo lugar - reto internacional de sostenibilidad para escuela Europea",
     emisor: "Esscuela Europea de sostenibilidad",
     anio: 2025,
-    link: "https://universidadeuropea.com/resources/media/documents/ACTA_JURADO_FASE_1_RETO_SOSTENIBILIDAD.pdf",
-    imagen: chep, // Logo o captura
+    link: aceptacion_sala,
+    imagen: aceptacion_sala, // Logo o captura
   },
   // ... agrega los demás
 ];
 
 const proyectos = [
-  // {
-  //   titulo: "Sistema de administracion medica",
-  //   tags: ["Node", "React", "Mysql"],
-  //   descripcion:
-  //     "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
-  // {
-  //   titulo: "Sistema de administracion estudiantil a la medida",
-  //   tags: ["Fluter", "Firebase"],
-  //   descripcion:
-  //     "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/fine-tuned-english",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
+  {
+    titulo: "Sistema de administracion medica",
+    tags: ["Node", "React", "Mysql"],
+    descripcion:
+      "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
+    videoId: "jvm6DpqqbLk", // Solo el ID del video
+    links: [
+      {
+        label: "enlace a Github",
+        url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
+      },
+      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
+      // { label: "Design", url: "https://figma.com/..." },
+    ],
+  },
+  {
+    titulo: "Sistema de administracion estudiantil a la medida",
+    tags: ["Fluter", "Firebase"],
+    descripcion:
+      "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
+    videoId: "jvm6DpqqbLk", // Solo el ID del video
+    links: [
+      {
+        label: "enlace a Github",
+        url: "https://github.com/CristianJ23/fine-tuned-english",
+      },
+      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
+      // { label: "Design", url: "https://figma.com/..." },
+    ],
+  },
   {
     titulo: "Sistema de control remoto para sphero mini",
     tags: ["Python", "Javascript", "html", "css"],
@@ -240,60 +239,65 @@ const Page_main = () => {
           </div>
         </section>
 
-{/* NUEVA SECCIÓN: CURSOS Y CERTIFICACIONES */}
-<section id="cursos" className="pt-8 mb-12">
-  <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
-    Formación y Certificaciones
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {datosCursos.map((curso, index) => (
-      <div
-        key={index}
-        /* IMPORTANTE: Quitamos overflow-hidden para que el zoom sea visible fuera del recuadro */
-        className="group relative bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
-      >
-        <div className="flex items-center gap-4">
-          
-          {/* Contenedor de la imagen con efecto Lupa */}
-          <div className="relative z-20 w-14 h-14">
-            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center flex-shrink-0 border border-indigo-50 shadow-sm transition-all duration-500 ease-in-out group-hover:scale-[10] group-hover:shadow-2xl group-hover:z-50 origin-center bg-white">
-              <img
-                src={curso.imagen}
-                alt={curso.nombre}
-                className="w-full h-full object-contain p-1"
-              />
-            </div>
-          </div>
+        {/* NUEVA SECCIÓN: CURSOS Y CERTIFICACIONES */}
+        <section id="cursos" className="pt-8 mb-12">
+          <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
+            Formación y Certificaciones
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {datosCursos.map((curso, index) => (
+              <div
+                key={index}
+                className="group relative bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden"
+              >
+                <div className="flex items-center gap-4">
+                  {/* Espacio para Medalla o Logo */}
+                  <div className="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-600 transition-colors duration-300">
+                    <img
+                      src={curso.imagen}
+                      alt={curso.nombre}
+                      className="w-10 h-10 object-contain group-hover:filter group-hover:invert transition-filter duration-300"
+                    />
+                  </div>
 
-          {/* Texto de la certificación */}
-          <div className="flex-1 transition-opacity duration-300 group-hover:opacity-20">
-            <h3 className="font-bold text-gray-800 leading-tight">
-              {curso.nombre}
-            </h3>
-            <p className="text-sm text-gray-500">
-              {curso.emisor} • {curso.anio}
-            </p>
-          </div>
-        </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-gray-800 leading-tight">
+                      {curso.nombre}
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      {curso.emisor} • {curso.anio}
+                    </p>
+                  </div>
+                </div>
 
-        {/* Botón de enlace */}
-        <div className="mt-4 flex justify-end transition-opacity duration-300 group-hover:opacity-10">
-          <a
-            href={curso.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 group-hover:translate-x-[-5px] transition-transform"
-          >
-            See more
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
+                {/* Botón "Conoce más" que aparece al pasar el mouse */}
+                <div className="mt-4 flex justify-end">
+                  <a
+                    href={curso.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 group-hover:translate-x-[-5px] transition-transform"
+                  >
+                    See more
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* NUEVA SECCIÓN: TECNOLOGÍAS CONOCIDAS */}
         <div id="tecnologias" className="pt-8 mb-12">

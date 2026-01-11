@@ -3,8 +3,7 @@ import Tecnologias from "./tecnologias_conocidas/tecnologias";
 import CardProyectoVideo from "./proyects/CardProyectoVideo";
 import miFoto from "./assets/me_curriculum.jpg";
 import certificate_phawai from "./assets/certificate_phawai.png";
-import aceptacion_sala from "./assets/aceptacion_sala.png";
-import chep from "./assets/chep_segundo_lugar.png";
+import aceptaacion_sala from "./assets/aceptaacion_sala.png";
 
 // --- Componentes de Datos y UI Reutilizables ---
 
@@ -22,61 +21,45 @@ const datosCursos = [
     nombre: "Participante Seleccionado - SALA 2026",
     emisor: "SALA - Summit of AI in Latin America",
     anio: 2026,
-    link: aceptacion_sala,
-    imagen: aceptacion_sala, // Logo o captura
-  },
-    {
-    nombre: "Segundo lugar - reto internacional de sostenibilidad para escuela Europea",
-    emisor: "Esscuela Europea de sostenibilidad",
-    anio: 2025,
-    link: "https://universidadeuropea.com/resources/media/documents/ACTA_JURADO_FASE_1_RETO_SOSTENIBILIDAD.pdf",
-    imagen: chep, // Logo o captura
+    link: aceptaacion_sala,
+    imagen: aceptaacion_sala, // Logo o captura
   },
   // ... agrega los demás
 ];
 
 const proyectos = [
-  // {
-  //   titulo: "Sistema de administracion medica",
-  //   tags: ["Node", "React", "Mysql"],
-  //   descripcion:
-  //     "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
-  // {
-  //   titulo: "Sistema de administracion estudiantil a la medida",
-  //   tags: ["Fluter", "Firebase"],
-  //   descripcion:
-  //     "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/fine-tuned-english",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
   {
+    titulo: "Sistema de administracion medica",
+    tags: ["Node", "React", "Mysql"],
+    descripcion:
+      "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
+    videoId: "jvm6DpqqbLk", // Solo el ID del video
+    links: [
+      { label: "enlace a Github", url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose" },
+      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
+      // { label: "Design", url: "https://figma.com/..." },
+    ],
+  },
+    {
+    titulo: "Sistema de administracion estudiantil a la medida",
+    tags: ["Fluter", "Firebase"],
+    descripcion:
+      "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
+    videoId: "jvm6DpqqbLk", // Solo el ID del video
+    links: [
+      { label: "enlace a Github", url: "https://github.com/CristianJ23/fine-tuned-english" },
+      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
+      // { label: "Design", url: "https://figma.com/..." },
+    ],
+  },
+      {
     titulo: "Sistema de control remoto para sphero mini",
     tags: ["Python", "Javascript", "html", "css"],
     descripcion:
       "Proyecto para manejo remoto de robot sphero mini via web usando python.",
-    videoId: "pojyX6XpNNA", // Solo el ID del video
+    videoId: "jvm6DpqqbLk", // Solo el ID del video
     links: [
-      {
-        label: "enlace a Github",
-        url: "https://github.com/CristianJ23/rimoto_sphero_minih",
-      },
+      { label: "enlace a Github", url: "https://github.com/CristianJ23/rimoto_sphero_minih" },
       // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
       // { label: "Design", url: "https://figma.com/..." },
     ],
@@ -240,60 +223,73 @@ const Page_main = () => {
           </div>
         </section>
 
-{/* NUEVA SECCIÓN: CURSOS Y CERTIFICACIONES */}
-<section id="cursos" className="pt-8 mb-12">
-  <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
-    Formación y Certificaciones
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {datosCursos.map((curso, index) => (
-      <div
-        key={index}
-        /* IMPORTANTE: Quitamos overflow-hidden para que el zoom sea visible fuera del recuadro */
-        className="group relative bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
-      >
-        <div className="flex items-center gap-4">
-          
-          {/* Contenedor de la imagen con efecto Lupa */}
-          <div className="relative z-20 w-14 h-14">
-            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center flex-shrink-0 border border-indigo-50 shadow-sm transition-all duration-500 ease-in-out group-hover:scale-[10] group-hover:shadow-2xl group-hover:z-50 origin-center bg-white">
-              <img
-                src={curso.imagen}
-                alt={curso.nombre}
-                className="w-full h-full object-contain p-1"
-              />
-            </div>
-          </div>
+        {/* NUEVA SECCIÓN: CURSOS Y CERTIFICACIONES */}
+        <section id="cursos" className="pt-8 mb-12">
+          <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
+            Formación y Certificaciones
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {datosCursos.map((curso, index) => (
+              <div
+                key={index}
+                className="group relative bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden"
+              >
+                <div className="flex items-center gap-4">
+                  {/* Espacio para Medalla o Logo */}
+                  <div className="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-600 transition-colors duration-300">
+                    <svg
+                      className="w-8 h-8 text-indigo-600 group-hover:text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                      />
+                    </svg>
+                  </div>
 
-          {/* Texto de la certificación */}
-          <div className="flex-1 transition-opacity duration-300 group-hover:opacity-20">
-            <h3 className="font-bold text-gray-800 leading-tight">
-              {curso.nombre}
-            </h3>
-            <p className="text-sm text-gray-500">
-              {curso.emisor} • {curso.anio}
-            </p>
-          </div>
-        </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-gray-800 leading-tight">
+                      {curso.nombre}
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      {curso.emisor} • {curso.anio}
+                    </p>
+                  </div>
+                </div>
 
-        {/* Botón de enlace */}
-        <div className="mt-4 flex justify-end transition-opacity duration-300 group-hover:opacity-10">
-          <a
-            href={curso.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 group-hover:translate-x-[-5px] transition-transform"
-          >
-            See more
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
+                {/* Botón "Conoce más" que aparece al pasar el mouse */}
+                <div className="mt-4 flex justify-end">
+                  <a
+                    href={curso.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 group-hover:translate-x-[-5px] transition-transform"
+                  >
+                    See more
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* NUEVA SECCIÓN: TECNOLOGÍAS CONOCIDAS */}
         <div id="tecnologias" className="pt-8 mb-12">
@@ -407,24 +403,6 @@ const Page_main = () => {
                   <path d="M22.23 0H1.77C.79 0 0 .78 0 1.74v20.52C0 23.22.79 24 1.77 24h20.46c.98 0 1.77-.78 1.77-1.74V1.74C24 .78 23.21 0 22.23 0zM7.17 20.46H3.59V8.42h3.58v12.04zM5.38 6.84c-1.16 0-1.92-.78-1.92-1.75s.76-1.76 1.92-1.76c1.16 0 1.92.79 1.92 1.76s-.76 1.75-1.92 1.75zM20.46 20.46h-3.58v-6.28c0-1.5-.54-2.52-1.88-2.52-1.02 0-1.63.7-1.9 1.38-.1.25-.13.59-.13.93v6.52H9.39s.05-10.9.0-12.04h3.58v1.54c.48-.73 1.35-1.77 3.22-1.77 2.34 0 4.1 1.54 4.1 4.87v7.39z" />
                 </svg>
                 https://www.linkedin.com/in/kriss-kriss
-              </a>
-            </p>
-            <p className="mb-2">
-              Instagram:{" "}
-              <a
-                href="https://www.instagram.com/cristian_cj_jimenez" // Reemplaza con tu usuario real
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-pink-600 hover:text-pink-800 font-medium flex items-center transition-colors"
-              >
-                <svg
-                  className="w-5 h-5 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-                instagram.com/cristian_cj_jimenez
               </a>
             </p>
           </div>

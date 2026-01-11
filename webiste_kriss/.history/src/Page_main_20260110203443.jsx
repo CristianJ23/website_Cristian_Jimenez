@@ -36,36 +36,36 @@ const datosCursos = [
 ];
 
 const proyectos = [
-  // {
-  //   titulo: "Sistema de administracion medica",
-  //   tags: ["Node", "React", "Mysql"],
-  //   descripcion:
-  //     "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
-  // {
-  //   titulo: "Sistema de administracion estudiantil a la medida",
-  //   tags: ["Fluter", "Firebase"],
-  //   descripcion:
-  //     "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/fine-tuned-english",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
+  {
+    titulo: "Sistema de administracion medica",
+    tags: ["Node", "React", "Mysql"],
+    descripcion:
+      "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
+    videoId: "jvm6DpqqbLk", // Solo el ID del video
+    links: [
+      {
+        label: "enlace a Github",
+        url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
+      },
+      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
+      // { label: "Design", url: "https://figma.com/..." },
+    ],
+  },
+  {
+    titulo: "Sistema de administracion estudiantil a la medida",
+    tags: ["Fluter", "Firebase"],
+    descripcion:
+      "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
+    videoId: "jvm6DpqqbLk", // Solo el ID del video
+    links: [
+      {
+        label: "enlace a Github",
+        url: "https://github.com/CristianJ23/fine-tuned-english",
+      },
+      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
+      // { label: "Design", url: "https://figma.com/..." },
+    ],
+  },
   {
     titulo: "Sistema de control remoto para sphero mini",
     tags: ["Python", "Javascript", "html", "css"],

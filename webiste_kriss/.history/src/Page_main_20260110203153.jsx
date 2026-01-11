@@ -36,36 +36,36 @@ const datosCursos = [
 ];
 
 const proyectos = [
-  // {
-  //   titulo: "Sistema de administracion medica",
-  //   tags: ["Node", "React", "Mysql"],
-  //   descripcion:
-  //     "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
-  // {
-  //   titulo: "Sistema de administracion estudiantil a la medida",
-  //   tags: ["Fluter", "Firebase"],
-  //   descripcion:
-  //     "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/fine-tuned-english",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
+  {
+    titulo: "Sistema de administracion medica",
+    tags: ["Node", "React", "Mysql"],
+    descripcion:
+      "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
+    videoId: "jvm6DpqqbLk", // Solo el ID del video
+    links: [
+      {
+        label: "enlace a Github",
+        url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
+      },
+      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
+      // { label: "Design", url: "https://figma.com/..." },
+    ],
+  },
+  {
+    titulo: "Sistema de administracion estudiantil a la medida",
+    tags: ["Fluter", "Firebase"],
+    descripcion:
+      "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
+    videoId: "jvm6DpqqbLk", // Solo el ID del video
+    links: [
+      {
+        label: "enlace a Github",
+        url: "https://github.com/CristianJ23/fine-tuned-english",
+      },
+      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
+      // { label: "Design", url: "https://figma.com/..." },
+    ],
+  },
   {
     titulo: "Sistema de control remoto para sphero mini",
     tags: ["Python", "Javascript", "html", "css"],
@@ -240,7 +240,7 @@ const Page_main = () => {
           </div>
         </section>
 
-{/* NUEVA SECCIÓN: CURSOS Y CERTIFICACIONES */}
+        {/* NUEVA SECCIÓN: CURSOS Y CERTIFICACIONES */}
 <section id="cursos" className="pt-8 mb-12">
   <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
     Formación y Certificaciones
@@ -249,14 +249,12 @@ const Page_main = () => {
     {datosCursos.map((curso, index) => (
       <div
         key={index}
-        /* IMPORTANTE: Quitamos overflow-hidden para que el zoom sea visible fuera del recuadro */
         className="group relative bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
       >
         <div className="flex items-center gap-4">
-          
-          {/* Contenedor de la imagen con efecto Lupa */}
-          <div className="relative z-20 w-14 h-14">
-            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center flex-shrink-0 border border-indigo-50 shadow-sm transition-all duration-500 ease-in-out group-hover:scale-[10] group-hover:shadow-2xl group-hover:z-50 origin-center bg-white">
+          {/* Contenedor de la imagen con Zoom Gigante */}
+          <div className="relative w-16 h-16 flex-shrink-0 z-10">
+            <div className="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center overflow-hidden border border-indigo-100 transition-all duration-500 group-hover:scale-[4] group-hover:shadow-2xl group-hover:z-50 group-hover:absolute group-hover:top-0 group-hover:left-0 bg-white">
               <img
                 src={curso.imagen}
                 alt={curso.nombre}
@@ -265,7 +263,7 @@ const Page_main = () => {
             </div>
           </div>
 
-          {/* Texto de la certificación */}
+          {/* Texto que se vuelve opaco cuando el zoom ocurre para no estorbar */}
           <div className="flex-1 transition-opacity duration-300 group-hover:opacity-20">
             <h3 className="font-bold text-gray-800 leading-tight">
               {curso.nombre}
@@ -282,18 +280,44 @@ const Page_main = () => {
             href={curso.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 group-hover:translate-x-[-5px] transition-transform"
+            className="text-xs font-bold text-indigo-600 flex items-center gap-1"
           >
-            See more
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            VER CREDENCIAL →
           </a>
         </div>
       </div>
     ))}
   </div>
 </section>
+
+                {/* Botón "Conoce más" que aparece al pasar el mouse */}
+                <div className="mt-4 flex justify-end">
+                  <a
+                    href={curso.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 group-hover:translate-x-[-5px] transition-transform"
+                  >
+                    See more
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* NUEVA SECCIÓN: TECNOLOGÍAS CONOCIDAS */}
         <div id="tecnologias" className="pt-8 mb-12">
