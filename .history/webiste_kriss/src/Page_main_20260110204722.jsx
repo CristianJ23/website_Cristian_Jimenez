@@ -12,21 +12,6 @@ import chep from "./assets/chep_segundo_lugar.png";
 const datosCursos = [
   {
     nombre:
-      "asistente aceptado - SALA 2026: Summit of AI in Latin America",
-    emisor: "SALA 2026: Summit of AI in Latin America",
-    anio: 2025,
-    link: sala_certicate,
-    imagen: sala_certicate, // Logo o captura
-  },
-    {
-    nombre:"mención honorífica - SALA 2026: Summit of AI in Latin America",
-    emisor: "SALA 2026: Summit of AI in Latin America",
-    anio: 2025,
-    link: sala_honorifico,
-    imagen: sala_honorifico, // Logo o captura
-  },
-  {
-    nombre:
       "Becario Workshop Internacional Phawai + Tarecda: Investigación en inteligencia artificial -- Segundo lugar",
     emisor: "Phawai & Tarecda",
     anio: 2025,
@@ -40,10 +25,9 @@ const datosCursos = [
     link: aceptacion_sala,
     imagen: aceptacion_sala, // Logo o captura
   },
-  {
-    nombre:
-      "Segundo lugar - reto internacional de sostenibilidad para escuela Europea",
-    emisor: "Essuela Europea de sostenibilidad",
+    {
+    nombre: "Segundo lugar - reto internacional de sostenibilidad para escuela Europea",
+    emisor: "Esscuela Europea de sostenibilidad",
     anio: 2025,
     link: "https://universidadeuropea.com/resources/media/documents/ACTA_JURADO_FASE_1_RETO_SOSTENIBILIDAD.pdf",
     imagen: chep, // Logo o captura
@@ -256,69 +240,60 @@ const Page_main = () => {
           </div>
         </section>
 
-        {/* NUEVA SECCIÓN: CURSOS Y CERTIFICACIONES */}
-        <section id="cursos" className="pt-8 mb-12">
-          <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
-            Formación y Certificaciones
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {datosCursos.map((curso, index) => (
-              <div
-                key={index}
-                /* IMPORTANTE: Quitamos overflow-hidden para que el zoom sea visible fuera del recuadro */
-                className="group relative bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-center gap-4">
-                  {/* Contenedor de la imagen con efecto Lupa */}
-                  <div className="relative z-20 w-14 h-14">
-                    <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center flex-shrink-0 border border-indigo-50 shadow-sm transition-all duration-500 ease-in-out group-hover:scale-[10] group-hover:shadow-2xl group-hover:z-50 origin-center bg-white">
-                      <img
-                        src={curso.imagen}
-                        alt={curso.nombre}
-                        className="w-full h-full object-contain p-1"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Texto de la certificación */}
-                  <div className="flex-1 transition-opacity duration-300 group-hover:opacity-20">
-                    <h3 className="font-bold text-gray-800 leading-tight">
-                      {curso.nombre}
-                    </h3>
-                    <p className="text-sm text-gray-500">
-                      {curso.emisor} • {curso.anio}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Botón de enlace */}
-                <div className="mt-4 flex justify-end transition-opacity duration-300 group-hover:opacity-10">
-                  <a
-                    href={curso.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 group-hover:translate-x-[-5px] transition-transform"
-                  >
-                    See more
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            ))}
+{/* NUEVA SECCIÓN: CURSOS Y CERTIFICACIONES */}
+<section id="cursos" className="pt-8 mb-12">
+  <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
+    Formación y Certificaciones
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {datosCursos.map((curso, index) => (
+      <div
+        key={index}
+        /* IMPORTANTE: Quitamos overflow-hidden para que el zoom sea visible fuera del recuadro */
+        className="group relative bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
+      >
+        <div className="flex items-center gap-4">
+          
+          {/* Contenedor de la imagen con efecto Lupa */}
+          <div className="relative z-20 w-14 h-14">
+            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center flex-shrink-0 border border-indigo-50 shadow-sm transition-all duration-500 ease-in-out group-hover:scale-[10] group-hover:shadow-2xl group-hover:z-50 origin-center bg-white">
+              <img
+                src={curso.imagen}
+                alt={curso.nombre}
+                className="w-full h-full object-contain p-1"
+              />
+            </div>
           </div>
-        </section>
+
+          {/* Texto de la certificación */}
+          <div className="flex-1 transition-opacity duration-300 group-hover:opacity-20">
+            <h3 className="font-bold text-gray-800 leading-tight">
+              {curso.nombre}
+            </h3>
+            <p className="text-sm text-gray-500">
+              {curso.emisor} • {curso.anio}
+            </p>
+          </div>
+        </div>
+
+        {/* Botón de enlace */}
+        <div className="mt-4 flex justify-end transition-opacity duration-300 group-hover:opacity-10">
+          <a
+            href={curso.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 group-hover:translate-x-[-5px] transition-transform"
+          >
+            See more
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
 
         {/* NUEVA SECCIÓN: TECNOLOGÍAS CONOCIDAS */}
         <div id="tecnologias" className="pt-8 mb-12">
