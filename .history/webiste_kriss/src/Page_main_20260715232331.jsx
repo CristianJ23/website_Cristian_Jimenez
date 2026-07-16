@@ -20,8 +20,8 @@ const datosCursos = [
     link: sala_certicate,
     imagen: sala_certicate, // Logo o captura
   },
-  {
-    nombre: "mención honorífica - SALA 2026: Summit of AI in Latin America",
+    {
+    nombre:"mención honorífica - SALA 2026: Summit of AI in Latin America",
     emisor: "SALA 2026: Summit of AI in Latin America",
     anio: 2026,
     link: sala_honorifico,
@@ -38,18 +38,10 @@ const datosCursos = [
   {
     nombre:
       "Segundo lugar - reto internacional de sostenibilidad para escuela Europea",
-    emisor: "Escuela Europea de sostenibilidad",
+    emisor: "Essuela Europea de sostenibilidad",
     anio: 2025,
     link: "https://universidadeuropea.com/resources/media/documents/ACTA_JURADO_FASE_1_RETO_SOSTENIBILIDAD.pdf",
     imagen: chep, // Logo o captura
-  },
-  {
-    nombre:
-      "Mentor estudiantil de estudiantes de nuevo ciclo de la carrera de computación UTPL ",
-    emisor: "Universidad Técnica Particular de Loja",
-    anio: 2026,
-    link: mentor.png,
-    imagen: mentor.png, // Logo o captura
   },
   // ... agrega los demás
 ];
