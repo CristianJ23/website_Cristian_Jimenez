@@ -48,8 +48,8 @@ const datosCursos = [
       "Mentor estudiantil de estudiantes de nuevo ciclo de la carrera de computación UTPL ",
     emisor: "Universidad Técnica Particular de Loja",
     anio: 2026,
-    link: mentor.png,
-    imagen: mentor.png, // Logo o captura
+    link: mentor,
+    imagen: mentor, // Logo o captura
   },
   // ... agrega los demás
 ];
