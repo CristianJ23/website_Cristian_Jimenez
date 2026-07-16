@@ -16,14 +16,14 @@ const datosCursos = [
     nombre:
       "Participante Seleccionado - SALA 2026: Summit of AI in Latin America",
     emisor: "SALA 2026: Summit of AI in Latin America",
-    anio: 2026,
+    anio: 2025,
     link: sala_certicate,
     imagen: sala_certicate, // Logo o captura
   },
     {
     nombre:"mención honorífica - SALA 2026: Summit of AI in Latin America",
     emisor: "SALA 2026: Summit of AI in Latin America",
-    anio: 2026,
+    anio: 2025,
     link: sala_honorifico,
     imagen: sala_honorifico, // Logo o captura
   },
