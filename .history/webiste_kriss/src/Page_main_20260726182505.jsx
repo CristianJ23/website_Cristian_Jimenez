@@ -333,7 +333,7 @@ const Page_main = () => {
         </div>
 
         {/* KEY PROJECTS (ID añadido) */}
-        {/*<section id="proyectos" className="pt-8 mb-12">
+        <section id="proyectos" className="pt-8 mb-12">
           <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
             developed proyects
           </h2>
@@ -347,14 +347,13 @@ const Page_main = () => {
                 links={proyecto.links}
                 tags={proyecto.tags}
               />
-            ))
-            }*/}
+            ))}
 
             {/* {proyectos.map((p, index) => (
               <CardProyecto key={index} {...p} />
             ))} */}
-          {/*</div>
-        </section>*/}
+          </div>
+        </section>
 
         {/* CONTACT (ID añadido) */}
         <section id="contactos" className="pt-8 mb-12">
