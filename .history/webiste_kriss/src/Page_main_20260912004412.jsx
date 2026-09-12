@@ -65,9 +65,8 @@ const proyectos = [
       "Autenticación JWT y control de roles",
       "Expedientes clínicos y gestión de citas",
       "API REST modular y base de datos relacional con MySQL",
-      "proyecto con propiedad intelectual y derechos de autor registrados en Ecuador",
     ],
-    videoId: "https://youtu.be/pxdsj4EHKk0", // Puedes poner el ID o enlace de YouTube
+    videoId: "https://www.youtube.com/shorts/KNNihmNvG9s", // Puedes poner el ID o enlace de YouTube
     links: [
       // {
       //   label: "Ver en GitHub",
@@ -94,24 +93,6 @@ const proyectos = [
       // },
     ],
   },
-      {
-    titulo: "Sistema de facturacion SRI",
-    tags: ["NextJS", "Firebase", "Django"],
-    descripcion:
-      "Sistema para facturacion de productos para clientes con empresas y personas naturales, con integracion al SRI.",
-    caracteristicas: [
-      "creacion de productos desde excel",
-      "creacion de facturas, notas de credito y notas de debito",
-      "integracion de pasarela de pagos con Stripe"
-    ],
-    videoId: "https://youtu.be/MgVX1eyIPxY?si=ohF7D5E1qDrrAXgk",
-    links: [
-      // {
-      //   label: "Ver en GitHub",
-      //   url: "https://github.com/CristianJ23/fine-tuned-english",
-      // },
-    ],
-  },
   {
     titulo: "Control telemático web para robot Sphero Mini",
     tags: ["Python", "JavaScript", "IoT", "WebSockets"],
@@ -130,7 +111,6 @@ const proyectos = [
       // },
     ],
   },
-
 ];
 
 // --- Navbar Fijo (Nuevo Componente) ---

@@ -7,6 +7,7 @@ import aceptacion_sala from "./assets/aceptacion_sala.png";
 import chep from "./assets/chep_segundo_lugar.png";
 import sala_certicate from "./assets/sala_certicate.png";
 import sala_honorifico from "./assets/sala_honorifico.png";
+import mentor from "./assets/mentor.png";
 
 // --- Componentes de Datos y UI Reutilizables ---
 
@@ -38,66 +39,75 @@ const datosCursos = [
   {
     nombre:
       "Segundo lugar - reto internacional de sostenibilidad para escuela Europea",
-    emisor: "Essuela Europea de sostenibilidad",
+    emisor: "Escuela Europea de sostenibilidad",
     anio: 2025,
     link: "https://universidadeuropea.com/resources/media/documents/ACTA_JURADO_FASE_1_RETO_SOSTENIBILIDAD.pdf",
     imagen: chep, // Logo o captura
   },
   {
     nombre:
-      "Segundo lugar - reto internacional de sostenibilidad para escuela Europea",
-    emisor: "Essuela Europea de sostenibilidad",
-    anio: 2025,
-    link: "https://universidadeuropea.com/resources/media/documents/ACTA_JURADO_FASE_1_RETO_SOSTENIBILIDAD.pdf",
-    imagen: chep, // Logo o captura
+      "Mentor estudiantil de estudiantes de nuevo ciclo de la carrera de computación UTPL ",
+    emisor: "Universidad Técnica Particular de Loja",
+    anio: 2026,
+    link: mentor,
+    imagen: mentor, // Logo o captura
   },
   // ... agrega los demás
 ];
 
 const proyectos = [
-  // {
-  //   titulo: "Sistema de administracion medica",
-  //   tags: ["Node", "React", "Mysql"],
-  //   descripcion:
-  //     "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
-  // {
-  //   titulo: "Sistema de administracion estudiantil a la medida",
-  //   tags: ["Fluter", "Firebase"],
-  //   descripcion:
-  //     "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/fine-tuned-english",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
   {
-    titulo: "Sistema de control remoto para sphero mini",
-    tags: ["Python", "Javascript", "html", "css"],
+    titulo: "Sistema de administración médica y hospitalaria",
+    tags: ["React", "Node.js", "MySQL", "JWT"],
     descripcion:
-      "Proyecto para manejo remoto de robot sphero mini via web usando python.",
-    videoId: "pojyX6XpNNA", // Solo el ID del video
+      "Plataforma integral full-stack diseñada para la gestión clínica hospitalaria. Incluye autenticación segura mediante JWT, control de expedientes clínicos, gestión de turnos médicos y arquitectura cliente-servidor de alto rendimiento.",
+    caracteristicas: [
+      "Autenticación JWT y control de roles",
+      "Expedientes clínicos y gestión de citas",
+      "API REST modular y base de datos relacional con MySQL",
+    ],
+    videoId: "https://youtube.com/shorts/KNNihmNvG9s?feature=share", // Puedes poner el ID o enlace de YouTube
     links: [
-      {
-        label: "enlace a Github",
-        url: "https://github.com/CristianJ23/rimoto_sphero_minih",
-      },
-      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-      // { label: "Design", url: "https://figma.com/..." },
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
+      // },
+    ],
+  },
+  {
+    titulo: "Sistema de gestión académica a la medida",
+    tags: ["Flutter", "Firebase", "Dart"],
+    descripcion:
+      "Aplicación multiplataforma creada a la medida para una prestigiosa academia de inglés en Loja. Centraliza el control de asistencia, seguimiento curricular, calificaciones y comunicación directa con estudiantes y tutores.",
+    caracteristicas: [
+      "Sincronización en tiempo real con Cloud Firestore",
+      "Interfaz móvil intuitiva y optimizada",
+      "Métricas de progreso y desempeño académico",
+    ],
+    videoId: "jvm6DpqqbLk",
+    links: [
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/fine-tuned-english",
+      // },
+    ],
+  },
+  {
+    titulo: "Control telemático web para robot Sphero Mini",
+    tags: ["Python", "JavaScript", "IoT", "WebSockets"],
+    descripcion:
+      "Sistema de telemetría y control remoto para el robot Sphero Mini a través de una aplicación web interactiva. Conexión de baja latencia con backend en Python para comandos motrices y sensores en tiempo real.",
+    caracteristicas: [
+      "Transmisión telemática en tiempo real",
+      "Panel de pilotaje web interactivo",
+      "Integración de hardware y sensores IoT",
+    ],
+    videoId: "pojyX6XpNNA",
+    links: [
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/rimoto_sphero_minih",
+      // },
     ],
   },
 ];
@@ -340,19 +350,11 @@ const Page_main = () => {
             {proyectos.map((proyecto, index) => (
               <CardProyectoVideo
                 key={index}
-                titulo={proyecto.titulo}
-                descripcion={proyecto.descripcion}
-                videoId={proyecto.videoId}
-                links={proyecto.links}
-                tags={proyecto.tags}
+                {...proyecto}
               />
             ))}
-
-            {/* {proyectos.map((p, index) => (
-              <CardProyecto key={index} {...p} />
-            ))} */}
           </div>
-        </section>
+        </section> 
 
         {/* CONTACT (ID añadido) */}
         <section id="contactos" className="pt-8 mb-12">

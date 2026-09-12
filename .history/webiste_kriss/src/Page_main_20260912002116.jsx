@@ -7,6 +7,7 @@ import aceptacion_sala from "./assets/aceptacion_sala.png";
 import chep from "./assets/chep_segundo_lugar.png";
 import sala_certicate from "./assets/sala_certicate.png";
 import sala_honorifico from "./assets/sala_honorifico.png";
+import mentor from "./assets/mentor.png";
 
 // --- Componentes de Datos y UI Reutilizables ---
 
@@ -14,16 +15,16 @@ import sala_honorifico from "./assets/sala_honorifico.png";
 const datosCursos = [
   {
     nombre:
-      "asistente aceptado - SALA 2026: Summit of AI in Latin America",
+      "Participante Seleccionado - SALA 2026: Summit of AI in Latin America",
     emisor: "SALA 2026: Summit of AI in Latin America",
-    anio: 2025,
+    anio: 2026,
     link: sala_certicate,
     imagen: sala_certicate, // Logo o captura
   },
-    {
-    nombre:"mención honorífica - SALA 2026: Summit of AI in Latin America",
+  {
+    nombre: "mención honorífica - SALA 2026: Summit of AI in Latin America",
     emisor: "SALA 2026: Summit of AI in Latin America",
-    anio: 2025,
+    anio: 2026,
     link: sala_honorifico,
     imagen: sala_honorifico, // Logo o captura
   },
@@ -36,19 +37,20 @@ const datosCursos = [
     imagen: certificate_phawai, // Logo o captura
   },
   {
-    nombre: "Participante Seleccionado - SALA 2026",
-    emisor: "SALA - Summit of AI in Latin America",
-    anio: 2026,
-    link: aceptacion_sala,
-    imagen: aceptacion_sala, // Logo o captura
-  },
-  {
     nombre:
       "Segundo lugar - reto internacional de sostenibilidad para escuela Europea",
-    emisor: "Essuela Europea de sostenibilidad",
+    emisor: "Escuela Europea de sostenibilidad",
     anio: 2025,
     link: "https://universidadeuropea.com/resources/media/documents/ACTA_JURADO_FASE_1_RETO_SOSTENIBILIDAD.pdf",
     imagen: chep, // Logo o captura
+  },
+  {
+    nombre:
+      "Mentor estudiantil de estudiantes de nuevo ciclo de la carrera de computación UTPL ",
+    emisor: "Universidad Técnica Particular de Loja",
+    anio: 2026,
+    link: mentor,
+    imagen: mentor, // Logo o captura
   },
   // ... agrega los demás
 ];
@@ -84,7 +86,7 @@ const proyectos = [
   //     // { label: "Design", url: "https://figma.com/..." },
   //   ],
   // },
-  {
+/*   {
     titulo: "Sistema de control remoto para sphero mini",
     tags: ["Python", "Javascript", "html", "css"],
     descripcion:
@@ -98,7 +100,7 @@ const proyectos = [
       // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
       // { label: "Design", url: "https://figma.com/..." },
     ],
-  },
+  }, */
 ];
 
 // --- Navbar Fijo (Nuevo Componente) ---
@@ -345,13 +347,14 @@ const Page_main = () => {
                 links={proyecto.links}
                 tags={proyecto.tags}
               />
-            ))}
+            ))
+            }
 
-            {/* {proyectos.map((p, index) => (
+            {proyectos.map((p, index) => (
               <CardProyecto key={index} {...p} />
-            ))} */}
+            ))}
           </div>
-        </section>
+        </section> 
 
         {/* CONTACT (ID añadido) */}
         <section id="contactos" className="pt-8 mb-12">

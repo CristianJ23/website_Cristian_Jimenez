@@ -56,51 +56,81 @@ const datosCursos = [
 ];
 
 const proyectos = [
-  // {
-  //   titulo: "Sistema de administracion medica",
-  //   tags: ["Node", "React", "Mysql"],
-  //   descripcion:
-  //     "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
-  // {
-  //   titulo: "Sistema de administracion estudiantil a la medida",
-  //   tags: ["Fluter", "Firebase"],
-  //   descripcion:
-  //     "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/fine-tuned-english",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
-/*   {
-    titulo: "Sistema de control remoto para sphero mini",
-    tags: ["Python", "Javascript", "html", "css"],
+  {
+    titulo: "Sistema de administración médica y hospitalaria",
+    tags: ["React", "Node.js", "MySQL", "JWT"],
     descripcion:
-      "Proyecto para manejo remoto de robot sphero mini via web usando python.",
-    videoId: "pojyX6XpNNA", // Solo el ID del video
-    links: [
-      {
-        label: "enlace a Github",
-        url: "https://github.com/CristianJ23/rimoto_sphero_minih",
-      },
-      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-      // { label: "Design", url: "https://figma.com/..." },
+      "Plataforma integral full-stack diseñada para la gestión clínica hospitalaria. Incluye autenticación segura mediante JWT, control de expedientes clínicos, gestión de turnos médicos y arquitectura cliente-servidor de alto rendimiento.",
+    caracteristicas: [
+      "Autenticación JWT y control de roles",
+      "Expedientes clínicos y gestión de citas",
+      "API REST modular y base de datos relacional con MySQL",
+      "proyecto con propiedad intelectual y derechos de autor registrados en Ecuador",
     ],
-  }, */
+    videoId: "https://youtu.be/pxdsj4EHKk0", // Puedes poner el ID o enlace de YouTube
+    links: [
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
+      // },
+    ],
+  },
+  {
+    titulo: "Sistema de mapeo de formatos para superintendencia de compañias",
+    tags: ["NextJS", "Firebase", "Excel"],
+    descripcion:
+      "Sistema SAS para el mapeo de formatos en la superintendencia de compañias desde excel.",
+    caracteristicas: [
+      "Comprobaciones de valores en tiempo real",
+      "Integración con Firebase para almacenamiento y autenticación",
+      "Generación de reportes en Excel y PDF",
+      "exportacion en formatos validos para superintendencia de compañias",
+    ],
+    videoId: "https://youtu.be/-YxFIJ2fx3g",
+    links: [
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/fine-tuned-english",
+      // },
+    ],
+  },
+      {
+    titulo: "Sistema de facturacion SRI",
+    tags: ["NextJS", "Firebase", "Django"],
+    descripcion:
+      "Sistema para facturacion de productos para clientes con empresas y personas naturales, con integracion al SRI.",
+    caracteristicas: [
+      "creacion de productos desde excel",
+      "creacion de facturas, notas de credito y notas de debito",
+      "integracion de pasarela de pagos con Stripe"
+    ],
+    videoId: "https://youtu.be/MgVX1eyIPxY?si=ohF7D5E1qDrrAXgk",
+    links: [
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/fine-tuned-english",
+      // },
+    ],
+  },
+  {
+    titulo: "Control telemático web para robot Sphero Mini",
+    tags: ["Python", "JavaScript", "IoT", "WebSockets"],
+    descripcion:
+      "Sistema de telemetría y control remoto para el robot Sphero Mini a través de una aplicación web interactiva. Conexión de baja latencia con backend en Python para comandos motrices y sensores en tiempo real.",
+    caracteristicas: [
+      "Transmisión telemática en tiempo real",
+      "Panel de pilotaje web interactivo",
+      "Integración de hardware y sensores IoT",
+    ],
+    videoId: "https://youtu.be/pojyX6XpNNA?si=4dRxrKUc77hpHm5L",
+    links: [
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/rimoto_sphero_minih",
+      // },
+    ],
+  },
+
 ];
 
 // --- Navbar Fijo (Nuevo Componente) ---
@@ -333,7 +363,7 @@ const Page_main = () => {
         </div>
 
         {/* KEY PROJECTS (ID añadido) */}
-        {/*<section id="proyectos" className="pt-8 mb-12">
+        <section id="proyectos" className="pt-8 mb-12">
           <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
             developed proyects
           </h2>
@@ -341,20 +371,11 @@ const Page_main = () => {
             {proyectos.map((proyecto, index) => (
               <CardProyectoVideo
                 key={index}
-                titulo={proyecto.titulo}
-                descripcion={proyecto.descripcion}
-                videoId={proyecto.videoId}
-                links={proyecto.links}
-                tags={proyecto.tags}
+                {...proyecto}
               />
-            ))
-            }*/}
-
-            {/* {proyectos.map((p, index) => (
-              <CardProyecto key={index} {...p} />
-            ))} */}
-          {/*</div>
-        </section>*/}
+            ))}
+          </div>
+        </section> 
 
         {/* CONTACT (ID añadido) */}
         <section id="contactos" className="pt-8 mb-12">

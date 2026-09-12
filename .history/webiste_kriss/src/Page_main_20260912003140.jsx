@@ -56,51 +56,60 @@ const datosCursos = [
 ];
 
 const proyectos = [
-  // {
-  //   titulo: "Sistema de administracion medica",
-  //   tags: ["Node", "React", "Mysql"],
-  //   descripcion:
-  //     "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
-  // {
-  //   titulo: "Sistema de administracion estudiantil a la medida",
-  //   tags: ["Fluter", "Firebase"],
-  //   descripcion:
-  //     "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/fine-tuned-english",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
-/*   {
-    titulo: "Sistema de control remoto para sphero mini",
-    tags: ["Python", "Javascript", "html", "css"],
+  {
+    titulo: "Sistema de administración médica y hospitalaria",
+    tags: ["React", "Node.js", "MySQL", "JWT"],
     descripcion:
-      "Proyecto para manejo remoto de robot sphero mini via web usando python.",
-    videoId: "pojyX6XpNNA", // Solo el ID del video
+      "Plataforma integral full-stack diseñada para la gestión clínica hospitalaria. Incluye autenticación segura mediante JWT, control de expedientes clínicos, gestión de turnos médicos y arquitectura cliente-servidor de alto rendimiento.",
+    caracteristicas: [
+      "Autenticación JWT y control de roles",
+      "Expedientes clínicos y gestión de citas",
+      "API REST modular y base de datos relacional con MySQL",
+    ],
+    videoId: "", // Puedes poner el ID o enlace de YouTube
+    links: [
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
+      // },
+    ],
+  },
+  {
+    titulo: "Sistema de gestión académica a la medida",
+    tags: ["Flutter", "Firebase", "Dart"],
+    descripcion:
+      "Aplicación multiplataforma creada a la medida para una prestigiosa academia de inglés en Loja. Centraliza el control de asistencia, seguimiento curricular, calificaciones y comunicación directa con estudiantes y tutores.",
+    caracteristicas: [
+      "Sincronización en tiempo real con Cloud Firestore",
+      "Interfaz móvil intuitiva y optimizada",
+      "Métricas de progreso y desempeño académico",
+    ],
+    videoId: "jvm6DpqqbLk",
     links: [
       {
-        label: "enlace a Github",
+        label: "Ver en GitHub",
+        url: "https://github.com/CristianJ23/fine-tuned-english",
+      },
+    ],
+  },
+  {
+    titulo: "Control telemático web para robot Sphero Mini",
+    tags: ["Python", "JavaScript", "IoT", "WebSockets"],
+    descripcion:
+      "Sistema de telemetría y control remoto para el robot Sphero Mini a través de una aplicación web interactiva. Conexión de baja latencia con backend en Python para comandos motrices y sensores en tiempo real.",
+    caracteristicas: [
+      "Transmisión telemática en tiempo real",
+      "Panel de pilotaje web interactivo",
+      "Integración de hardware y sensores IoT",
+    ],
+    videoId: "pojyX6XpNNA",
+    links: [
+      {
+        label: "Ver en GitHub",
         url: "https://github.com/CristianJ23/rimoto_sphero_minih",
       },
-      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-      // { label: "Design", url: "https://figma.com/..." },
     ],
-  }, */
+  },
 ];
 
 // --- Navbar Fijo (Nuevo Componente) ---
@@ -341,19 +350,11 @@ const Page_main = () => {
             {proyectos.map((proyecto, index) => (
               <CardProyectoVideo
                 key={index}
-                titulo={proyecto.titulo}
-                descripcion={proyecto.descripcion}
-                videoId={proyecto.videoId}
-                links={proyecto.links}
-                tags={proyecto.tags}
+                {...proyecto}
               />
             ))}
-
-            {/* {proyectos.map((p, index) => (
-              <CardProyecto key={index} {...p} />
-            ))} */}
           </div>
-        </section>
+        </section> 
 
         {/* CONTACT (ID añadido) */}
         <section id="contactos" className="pt-8 mb-12">

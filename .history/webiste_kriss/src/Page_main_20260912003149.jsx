@@ -5,11 +5,29 @@ import miFoto from "./assets/me_curriculum.jpg";
 import certificate_phawai from "./assets/certificate_phawai.png";
 import aceptacion_sala from "./assets/aceptacion_sala.png";
 import chep from "./assets/chep_segundo_lugar.png";
+import sala_certicate from "./assets/sala_certicate.png";
+import sala_honorifico from "./assets/sala_honorifico.png";
+import mentor from "./assets/mentor.png";
 
 // --- Componentes de Datos y UI Reutilizables ---
 
 // Datos de ejemplo para las secciones
 const datosCursos = [
+  {
+    nombre:
+      "Participante Seleccionado - SALA 2026: Summit of AI in Latin America",
+    emisor: "SALA 2026: Summit of AI in Latin America",
+    anio: 2026,
+    link: sala_certicate,
+    imagen: sala_certicate, // Logo o captura
+  },
+  {
+    nombre: "mención honorífica - SALA 2026: Summit of AI in Latin America",
+    emisor: "SALA 2026: Summit of AI in Latin America",
+    anio: 2026,
+    link: sala_honorifico,
+    imagen: sala_honorifico, // Logo o captura
+  },
   {
     nombre:
       "Becario Workshop Internacional Phawai + Tarecda: Investigación en inteligencia artificial -- Segundo lugar",
@@ -19,66 +37,77 @@ const datosCursos = [
     imagen: certificate_phawai, // Logo o captura
   },
   {
-    nombre: "Participante Seleccionado - SALA 2026",
-    emisor: "SALA - Summit of AI in Latin America",
-    anio: 2026,
-    link: aceptacion_sala,
-    imagen: aceptacion_sala, // Logo o captura
-  },
-    {
-    nombre: "Segundo lugar - reto internacional de sostenibilidad para escuela Europea",
-    emisor: "Esscuela Europea de sostenibilidad",
+    nombre:
+      "Segundo lugar - reto internacional de sostenibilidad para escuela Europea",
+    emisor: "Escuela Europea de sostenibilidad",
     anio: 2025,
     link: "https://universidadeuropea.com/resources/media/documents/ACTA_JURADO_FASE_1_RETO_SOSTENIBILIDAD.pdf",
     imagen: chep, // Logo o captura
+  },
+  {
+    nombre:
+      "Mentor estudiantil de estudiantes de nuevo ciclo de la carrera de computación UTPL ",
+    emisor: "Universidad Técnica Particular de Loja",
+    anio: 2026,
+    link: mentor,
+    imagen: mentor, // Logo o captura
   },
   // ... agrega los demás
 ];
 
 const proyectos = [
-  // {
-  //   titulo: "Sistema de administracion medica",
-  //   tags: ["Node", "React", "Mysql"],
-  //   descripcion:
-  //     "Proyecto para la gestion hospitalaria full-stack. Incluye autenticacion JWT. Arquitectura cliente servidor.",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
-  // {
-  //   titulo: "Sistema de administracion estudiantil a la medida",
-  //   tags: ["Fluter", "Firebase"],
-  //   descripcion:
-  //     "Proyecto para la gestion estudiantil creado a la medida para academia de ingles de Loja",
-  //   videoId: "jvm6DpqqbLk", // Solo el ID del video
-  //   links: [
-  //     {
-  //       label: "enlace a Github",
-  //       url: "https://github.com/CristianJ23/fine-tuned-english",
-  //     },
-  //     // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-  //     // { label: "Design", url: "https://figma.com/..." },
-  //   ],
-  // },
   {
-    titulo: "Sistema de control remoto para sphero mini",
-    tags: ["Python", "Javascript", "html", "css"],
+    titulo: "Sistema de administración médica y hospitalaria",
+    tags: ["React", "Node.js", "MySQL", "JWT"],
     descripcion:
-      "Proyecto para manejo remoto de robot sphero mini via web usando python.",
-    videoId: "pojyX6XpNNA", // Solo el ID del video
+      "Plataforma integral full-stack diseñada para la gestión clínica hospitalaria. Incluye autenticación segura mediante JWT, control de expedientes clínicos, gestión de turnos médicos y arquitectura cliente-servidor de alto rendimiento.",
+    caracteristicas: [
+      "Autenticación JWT y control de roles",
+      "Expedientes clínicos y gestión de citas",
+      "API REST modular y base de datos relacional con MySQL",
+    ],
+    videoId: "", // Puedes poner el ID o enlace de YouTube
     links: [
-      {
-        label: "enlace a Github",
-        url: "https://github.com/CristianJ23/rimoto_sphero_minih",
-      },
-      // { label: "Backend API", url: "https://github.com/CristianJ23/repo-back" },
-      // { label: "Design", url: "https://figma.com/..." },
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/prototipo_clinicaHospital_SanJose",
+      // },
+    ],
+  },
+  {
+    titulo: "Sistema de gestión académica a la medida",
+    tags: ["Flutter", "Firebase", "Dart"],
+    descripcion:
+      "Aplicación multiplataforma creada a la medida para una prestigiosa academia de inglés en Loja. Centraliza el control de asistencia, seguimiento curricular, calificaciones y comunicación directa con estudiantes y tutores.",
+    caracteristicas: [
+      "Sincronización en tiempo real con Cloud Firestore",
+      "Interfaz móvil intuitiva y optimizada",
+      "Métricas de progreso y desempeño académico",
+    ],
+    videoId: "jvm6DpqqbLk",
+    links: [
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/fine-tuned-english",
+      // },
+    ],
+  },
+  {
+    titulo: "Control telemático web para robot Sphero Mini",
+    tags: ["Python", "JavaScript", "IoT", "WebSockets"],
+    descripcion:
+      "Sistema de telemetría y control remoto para el robot Sphero Mini a través de una aplicación web interactiva. Conexión de baja latencia con backend en Python para comandos motrices y sensores en tiempo real.",
+    caracteristicas: [
+      "Transmisión telemática en tiempo real",
+      "Panel de pilotaje web interactivo",
+      "Integración de hardware y sensores IoT",
+    ],
+    videoId: "pojyX6XpNNA",
+    links: [
+      // {
+      //   label: "Ver en GitHub",
+      //   url: "https://github.com/CristianJ23/rimoto_sphero_minih",
+      // },
     ],
   },
 ];
@@ -240,60 +269,69 @@ const Page_main = () => {
           </div>
         </section>
 
-{/* NUEVA SECCIÓN: CURSOS Y CERTIFICACIONES */}
-<section id="cursos" className="pt-8 mb-12">
-  <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
-    Formación y Certificaciones
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {datosCursos.map((curso, index) => (
-      <div
-        key={index}
-        /* IMPORTANTE: Quitamos overflow-hidden para que el zoom sea visible fuera del recuadro */
-        className="group relative bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
-      >
-        <div className="flex items-center gap-4">
-          
-          {/* Contenedor de la imagen con efecto Lupa */}
-          <div className="relative z-20 w-14 h-14">
-            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center flex-shrink-0 border border-indigo-50 shadow-sm transition-all duration-500 ease-in-out group-hover:scale-[10] group-hover:shadow-2xl group-hover:z-50 origin-center bg-white">
-              <img
-                src={curso.imagen}
-                alt={curso.nombre}
-                className="w-full h-full object-contain p-1"
-              />
-            </div>
-          </div>
+        {/* NUEVA SECCIÓN: CURSOS Y CERTIFICACIONES */}
+        <section id="cursos" className="pt-8 mb-12">
+          <h2 className="text-3xl font-bold border-l-4 border-indigo-500 pl-4 mb-6">
+            Formación y Certificaciones
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {datosCursos.map((curso, index) => (
+              <div
+                key={index}
+                /* IMPORTANTE: Quitamos overflow-hidden para que el zoom sea visible fuera del recuadro */
+                className="group relative bg-white p-5 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-4">
+                  {/* Contenedor de la imagen con efecto Lupa */}
+                  <div className="relative z-20 w-14 h-14">
+                    <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center flex-shrink-0 border border-indigo-50 shadow-sm transition-all duration-500 ease-in-out group-hover:scale-[10] group-hover:shadow-2xl group-hover:z-50 origin-center bg-white">
+                      <img
+                        src={curso.imagen}
+                        alt={curso.nombre}
+                        className="w-full h-full object-contain p-1"
+                      />
+                    </div>
+                  </div>
 
-          {/* Texto de la certificación */}
-          <div className="flex-1 transition-opacity duration-300 group-hover:opacity-20">
-            <h3 className="font-bold text-gray-800 leading-tight">
-              {curso.nombre}
-            </h3>
-            <p className="text-sm text-gray-500">
-              {curso.emisor} • {curso.anio}
-            </p>
-          </div>
-        </div>
+                  {/* Texto de la certificación */}
+                  <div className="flex-1 transition-opacity duration-300 group-hover:opacity-20">
+                    <h3 className="font-bold text-gray-800 leading-tight">
+                      {curso.nombre}
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      {curso.emisor} • {curso.anio}
+                    </p>
+                  </div>
+                </div>
 
-        {/* Botón de enlace */}
-        <div className="mt-4 flex justify-end transition-opacity duration-300 group-hover:opacity-10">
-          <a
-            href={curso.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 group-hover:translate-x-[-5px] transition-transform"
-          >
-            See more
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
+                {/* Botón de enlace */}
+                <div className="mt-4 flex justify-end transition-opacity duration-300 group-hover:opacity-10">
+                  <a
+                    href={curso.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 group-hover:translate-x-[-5px] transition-transform"
+                  >
+                    See more
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* NUEVA SECCIÓN: TECNOLOGÍAS CONOCIDAS */}
         <div id="tecnologias" className="pt-8 mb-12">
@@ -312,19 +350,11 @@ const Page_main = () => {
             {proyectos.map((proyecto, index) => (
               <CardProyectoVideo
                 key={index}
-                titulo={proyecto.titulo}
-                descripcion={proyecto.descripcion}
-                videoId={proyecto.videoId}
-                links={proyecto.links}
-                tags={proyecto.tags}
+                {...proyecto}
               />
             ))}
-
-            {/* {proyectos.map((p, index) => (
-              <CardProyecto key={index} {...p} />
-            ))} */}
           </div>
-        </section>
+        </section> 
 
         {/* CONTACT (ID añadido) */}
         <section id="contactos" className="pt-8 mb-12">
